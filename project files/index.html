@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Guessing Game</h1>
+    <label for="gameRange">Select game range:</label>
+    <select id="gameRange" onchange="initGame()">
+        <option value="10">1-10</option>
+        <option value="100" selected>1-100</option>
+        <option value="1000">1-1000</option>
+    </select>
+    <p id="rangeDisplay">Enter a number from 1 to 100: </p>
+    <input type="text" id="guessField">
+    <button onclick="checkGuess()">Submit Guess</button>
+    <button onclick="restartGame()">Restart Game</button>
+    <p id="message"></p>
+    <p id="guessCount">Number of Guesses: 0</p>
+    <p id="randomNumber" style="display: none;"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
